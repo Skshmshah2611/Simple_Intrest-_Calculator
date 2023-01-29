@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <title>Simple Intrest Calculator</title>
+  </head>
+  <body>
+    <h1>Simple Intrest Calculator</h1>
+    <div class="maindiv">
+      Amount <input type="number" id="principal" class="input" /> <br /><br />
+      Interest Rate<input
+        class="input"
+        type="range"
+        oninput="updateRate()"
+        id="rate"
+        min="1"
+        max="20"
+        step="0.25"
+        value="default_val"
+      />
+      <span class="input" id="rate_val">
+        10.25%
+      </span>
+      <br /><br />
+      No. Of Years
+      <select class="input" id="years">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+      <br /><br />
+
+      <button onclick="compute(); return false;">Compute Interest</button>
+      <br />
+      <span id="result" class="result"> </span>
+      <br /><br />
+      <footer class="footer">
+        &#169; Everyone Can Get Rich <br />
+        This Calculator belns to - @skshm.shah
+      </footer>
+    </div>
+  </body>
+</html>
